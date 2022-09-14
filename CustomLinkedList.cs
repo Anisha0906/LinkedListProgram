@@ -103,8 +103,26 @@ namespace LinkedListProgram
             {
                 newNode = newNode.next;
             }
-            int lasteleteNode = newNode.next.data;            newNode.next = null;
+            int lasteleteNode = newNode.next.data;           
+            newNode.next = null;
             return lasteleteNode;
+        }
+        public int Search(int value)
+        {
+            Node temp = this.head;
+
+
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return value;
+                }
+
+                temp = temp.next;
+
+            }
+            return 0;
         }
     }
 }

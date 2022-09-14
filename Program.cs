@@ -46,7 +46,11 @@ namespace LinkedListProgram
             Console.WriteLine("Deleting last node from list");
             customLinkedList.DeleteLastNode();
             customLinkedList.Display();
+
+            Console.WriteLine("Searching an element in list " + customLinkedList.Search(30));
+            customLinkedList.Search(30);
             Console.ReadLine();
+
         }
     }
 }
