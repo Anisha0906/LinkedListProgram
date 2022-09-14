@@ -40,8 +40,11 @@ namespace LinkedListProgram
             customLinkedList.InsertInBetween(30, 2);
             customLinkedList.Display();
 
-            Console.WriteLine("Deleted first element from list");
-            customLinkedList.DeleteFirstNode();
+            //Console.WriteLine("Deleted first element from list");
+            //customLinkedList.DeleteFirstNode();
+
+            Console.WriteLine("Deleting last node from list");
+            customLinkedList.DeleteLastNode();
             customLinkedList.Display();
             Console.ReadLine();
         }

@@ -87,5 +87,24 @@ namespace LinkedListProgram
             this.head = this.head.next;
             return deleteNode;
         }
+        public int DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return 0;
+            }
+            if (this.head.next == null)
+            {
+                 return 0;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            int lasteleteNode = newNode.next.data;            newNode.next = null;
+            return lasteleteNode;
+        }
     }
 }
