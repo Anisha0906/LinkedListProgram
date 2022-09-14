@@ -25,7 +25,8 @@ namespace LinkedListProgram
             CustomLinkedList customLinkedList = new CustomLinkedList();
             customLinkedList.AddFirst(70);
             customLinkedList.AddFirst(56);
-            //Console.WriteLine("Element added before head node 70");
+            Console.WriteLine("Element added before head node 70");
+            customLinkedList.Display();
 
             //CustomLinkedList customLinkedList1 = new CustomLinkedList();
             //customLinkedList1.AddEnd(56);
@@ -37,6 +38,10 @@ namespace LinkedListProgram
 
             Console.WriteLine("Inserting an element in list");
             customLinkedList.InsertInBetween(30, 2);
+            customLinkedList.Display();
+
+            Console.WriteLine("Deleted first element from list");
+            customLinkedList.DeleteFirstNode();
             customLinkedList.Display();
             Console.ReadLine();
         }
