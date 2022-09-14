@@ -48,5 +48,33 @@ namespace LinkedListProgram
             newNode.next = head;
             this.head = newNode;
         }
+        public void InsertInBetween(int data, int position)
+        {
+            Node newNode = new Node(data);
+            newNode.data = data;
+            newNode.next = null;
+
+            if (position < 1)
+            {
+                Console.WriteLine("position should be greater");
+            }
+            else if (position == 1)
+            {
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                Node tempNode = new Node(data);
+                tempNode = this.head;
+                while (position > 2)
+                {
+                    tempNode = tempNode.next;
+                    position--;
+                }
+                newNode.next = tempNode.next;
+                tempNode.next = newNode;
+            }
+        }
     }
 }
